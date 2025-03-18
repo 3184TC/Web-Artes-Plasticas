@@ -42,11 +42,6 @@ const About = ({ style }: any) => {
    }, []);
 
    if (loading) return <p>Cargando...</p>;
-   //funcion para limpiar html
-   const cleanHtml = (html: string) => {
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      return doc.body.textContent || "";
-   };
    return (
       <div className={`about-area pd-top-120 ${style ? "pd-bottom-120" : ""}`}>
          <div className="container">
@@ -64,7 +59,7 @@ const About = ({ style }: any) => {
                               <h2 className="title">Carrera de Artes Plásticas.</h2>
                               {/* Renderizar historia con HTML seguro */}
                               {/* <p className="content" dangerouslySetInnerHTML={{ __html: institucion.institucion_historia }} /> */}
-                              <p className="content">{cleanHtml(institucion.institucion_historia)}</p>
+                              <p className="content" dangerouslySetInnerHTML={{__html: institucion.institucion_historia}}/>
                               <div className="row">
                                  {list_data.map((item, index) => (
                                     <div key={index} className="col-sm-6">

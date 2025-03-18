@@ -56,15 +56,19 @@ const CourseDetailsArea = () => {
                <CourseDetailsSidebar />
             </div>
 
-            <div className="row justify-content-center pd-top-100">
+            <div className="row justify-content-center pd-top-100"
+            style={{ maxWidth: '1200px', margin: '0 auto' }}>
                <h2>OTROS COMUNICADOS</h2>
                {users.slice(0, 3).map((user) => (
                   <div key={user.idconvocatorias} className="col-lg-4 col-md-6">
-                     <div className="single-course-inner">
-                        <div className="thumb">
+                     <div className="single-course-inner"
+                     style={{ width: '100%', height: '500px', overflow: 'hidden' }}>
+                        <div className="thumb"
+                        style={{ width: '100%', height: '300px', overflow: 'hidden' }}>
                            <Image src={`https://serviciopagina.upea.bo/Convocatorias/${user.con_foto_portada}`} alt="img" width={500} height={300} layout="responsive" unoptimized />
                         </div>
-                        <div className="details">
+                        <div className="details"
+                        style={{ padding: '10px', height: '200px', overflow: 'hidden' }}>
                            <div className="details-inner">
                               <div className="emt-user">
                                  <span className="u-thumb"><Image src={`https://serviciopagina.upea.bo/Convocatorias/${user.con_foto_portada}`} alt="img" width={500} height={300} layout="responsive" unoptimized/></span>

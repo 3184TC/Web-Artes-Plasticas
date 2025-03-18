@@ -41,11 +41,6 @@ const BlogArea = () => {
 
       fetchUsers();
    }, []);
-   //funcion para limpiar html
-   const cleanHtml = (html: string) => {
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      return doc.body.textContent || "";
-   };
    return (
       <div className="blog-area pd-top-120 pd-bottom-120">
          <div className="container">
@@ -62,7 +57,7 @@ const BlogArea = () => {
                               <li><i className="fa fa-calendar-check-o"></i> {user.con_fecha_inicio} / {user.con_fecha_fin}</li>
                            </ul>
                            <h3 className="title"><Link href="#">{user.con_titulo}</Link></h3>
-                           <p>{cleanHtml(user.con_descripcion)}</p>
+                           <p dangerouslySetInnerHTML={{__html: user.con_descripcion}}/>
                            {/* <Link className="read-more-text" href="/blog-details">convocatorias <i className="fa fa-angle-right"></i></Link> */}
                         </div>
                      </div>

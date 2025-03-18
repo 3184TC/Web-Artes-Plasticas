@@ -38,11 +38,6 @@ const CourseArea = () => {
    const handleTabClick = (index: any) => {
       setActiveTab(index);
    };
-   //funcion para limpiar html
-   const cleanHtml = (html: string) => {
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      return doc.body.textContent || "";
-   };
    return (
       <div className="course-area pd-top-100 pd-bottom-90">
          <div className="container">
@@ -78,10 +73,13 @@ const CourseArea = () => {
                                        <span className="u-thumb">
                                           <Image src={`https://serviciopagina.upea.bo/Publicaciones/${user.publicaciones_imagen}`} alt="user" width={30} height={30} unoptimized />
                                        </span>
-                                       <span className="align-self-center">{user.publicaciones_titulo}</span>
+                                       <span className="align-self-center">
+                                          <p className="content" dangerouslySetInnerHTML={{ __html: user.publicaciones_titulo, }} />
+                                       </span>
                                     </div>
                                     <h6>
-                                       <Link href="/course-details">{cleanHtml(user.publicaciones_descripcion)}</Link>
+                                       <Link href="/course-details">
+                                       <p dangerouslySetInnerHTML={{__html: user.publicaciones_descripcion}}/></Link>
                                     </h6>
                                  </div>
                                  {/* <div className="emt-course-meta">

@@ -2,6 +2,7 @@
 import faq_data from "@/data/FaqData";
 import Link from "next/link";
 import { useState } from "react";
+import Image from 'next/image';
 
 const tab_title: string[] = ["M@E", "INSCRIPCIONES", "CAMPUS VIRTUAL", "BIBLIOTECA",];
 
@@ -56,10 +57,15 @@ const CourseDetailsNavTab = () => {
 
                <div className="col-lg-12 col-md-6">
                   <div className="single-intro-inner style-icon-bg bg-gray text-center">
-                     <div className="thumb">
-                        {/* <Image src="@/assets/img/icon/12.png" alt="Icon"
-                           width={300} // Agrega un valor de ancho
-                           height={300} /> */}
+                     <div className="">
+
+                        <Image
+                        style={{ width: '200px', height: '100px' }}
+                           src="/assets/img/logo-maeupea.png"
+                           alt="Icon"
+                           width={300}
+                           height={300}
+                        />
                         <div className="intro-count"></div>
                      </div>
                      <div className="details">
@@ -76,10 +82,14 @@ const CourseDetailsNavTab = () => {
                <div className="course-details-content">
                   <div className="col-lg-12 col-md-6">
                      <div className="single-intro-inner style-icon-bg bg-gray text-center">
-                        <div className="thumb">
-                           {/* <Image src="@/assets/img/icon/12.png" alt="Icon"
-                           width={300} // Agrega un valor de ancho
-                           height={300} /> */}
+                        <div className="">
+                           <Image
+                           style={{ width: '200px', height: '100px' }}
+                              src="/assets/img/logo-suyayupea.png"
+                              alt="Icon"
+                              width={300}
+                              height={300}
+                           />
                            <div className="intro-count"></div>
                         </div>
                         <div className="details">
@@ -96,10 +106,14 @@ const CourseDetailsNavTab = () => {
                <div className="course-details-content">
                   <div className="col-lg-12 col-md-6">
                      <div className="single-intro-inner style-icon-bg bg-gray text-center">
-                        <div className="thumb">
-                           {/* <Image src="@/assets/img/icon/12.png" alt="Icon"
-                           width={300} // Agrega un valor de ancho
-                           height={300} /> */}
+                        <div className="">
+                           <Image
+                           style={{ width: '100px', height: '100px' }}
+                              src="/assets/img/logo-moodle.png"
+                              alt="Icon"
+                              width={300}
+                              height={300}
+                           />
                            <div className="intro-count"></div>
                         </div>
                         <div className="details">
@@ -119,10 +133,14 @@ const CourseDetailsNavTab = () => {
                      <div className="total-avarage-rating">
                         <div className="col-lg-12 col-md-6">
                            <div className="single-intro-inner style-icon-bg bg-gray text-center">
-                              <div className="thumb">
-                                 {/* <Image src="@/assets/img/icon/12.png" alt="Icon"
-                           width={300} // Agrega un valor de ancho
-                           height={300} /> */}
+                              <div className="">
+                                 <Image
+                                 style={{ width: '200px', height: '80px' }}
+                                    src="/assets/img/logo-koha.png"
+                                    alt="Icon"
+                                    width={300}
+                                    height={300}
+                                 />
                                  <div className="intro-count"></div>
                               </div>
                               <div className="details">

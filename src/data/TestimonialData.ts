@@ -16,7 +16,7 @@ const testi_data: DataType[] = [
    {
       id: 1,
       page: "home_1",
-      desc: "Los egresados de la Carrera de Artes Plásticas de la Universidad Pública de El Alto desarrollan un profundo sentido estético y creativo, dominando la manipulación de elementos visuales para expresar ideas innovadoras. A través del dominio de técnicas académicas y la exploración de prácticas artísticas, son capaces de crear nuevos lenguajes plásticos que reflejan su identidad y visión en el ámbito artístico contemporáneo.",
+      desc: "Los egresados de la carrera de Artes Plásticas de la Universidad Pública de El Alto desarrollan un profundo sentido estético y creativo, dominando la manipulación de elementos visuales para expresar ideas innovadoras. A través del dominio de técnicas académicas y la exploración de prácticas artísticas, son capaces de crear nuevos lenguajes plásticos que reflejan su identidad y visión en el ámbito artístico contemporáneo",
       author_img: authorImg_1,
       author_name: "MALLA CURRICULAR",
       designation: "ARTES PLÁSTICAS",
@@ -24,7 +24,7 @@ const testi_data: DataType[] = [
    {
       id: 2,
       page: "home_1",
-      desc: "Carrera de Artes Plásticas con 4 Menciones: CERÁMICA, PINTURA, ESCULTURA Y/O GRABADO ARTISTICO",
+      desc: "Carrera de Artes Plásticas con 4 menciones: Cerámica, Pintura, Escultura y/o Grabado Artístico.",
       author_img: authorImg_2,
       author_name: "PLAN DE ESTUDIOS",
       designation: "ARTES PLÁSTICAS",

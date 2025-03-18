@@ -8,7 +8,7 @@ import { useState } from "react";
 import HeaderSearchbar from "./menu/HeaderSearchbar";
 
 import logo_1 from "@/assets/img/logo-artes-foother.png";
-import logo_2 from "@/assets/img/logo-2.png";
+import logo_2 from "@/assets/img/logo-artes-foother.png";
 
 const HeaderOne = ({ style, style_2 }: any) => {
 

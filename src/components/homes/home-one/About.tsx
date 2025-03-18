@@ -35,11 +35,6 @@ const About = () => {
    }, []);
 
    if (loading) return <p>Cargando...</p>;
-   //funcion para limpiar html
-   const cleanHtml = (html: string) => {
-      const doc = new DOMParser().parseFromString(html, "text/html");
-      return doc.body.textContent || "";
-   };
 
    return (
       <div className="about-area pd-top-140">
@@ -60,7 +55,7 @@ const About = () => {
                            <div className="section-title mb-0">
                               <h6 className="sub-title right-line">SOBRE LA CARRERA</h6>
                               <h2 className="title">Artes Plásticas</h2>
-                              <p className="content">{cleanHtml(institucion.institucion_sobre_ins)}</p>
+                              <p className="content" dangerouslySetInnerHTML={{__html: institucion.institucion_sobre_ins,}}/>
                               {/* <ul className="single-list-wrap">
                                  <li className="single-list-inner style-check-box-grid">
                                     <div className="media">

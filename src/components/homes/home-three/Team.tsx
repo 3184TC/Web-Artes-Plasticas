@@ -1,11 +1,11 @@
 "use client";
+import React, { useEffect, useState } from 'react';
 /* import team_data from '@/data/TeamData' */
 import Image from 'next/image'
 import Link from 'next/link'
 /* import React from 'react' */
 
-
-import React, { useEffect, useState } from 'react';/* 
+/* 
 import { getUsersData } from '@/data/TeamData'; */
 
 interface User {
@@ -46,15 +46,37 @@ const Team = ({ style }: any) => {
         <div className="row justify-content-center">
           {users.map((user, index) => (
             <div key={index} className="col-lg-4 col-md-6">
-              <div className="single-team-inner">
-                <div className="thumb">
+              <div className="single-team-inner"
+                style={{
+                  height: "400px", // Altura fija para todos los elementos
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  textAlign: "center",
+                  overflow: "hidden",
+                }}>
+                <div className="thumb"
+                  style={{
+                    width: "100%",
+                    height: "300px", // Fija la altura de la imagen
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    overflow: "hidden",
+                  }}>
                   <Image
                     src={`https://serviciopagina.upea.bo/InstitucionUpea/Autoridad/${user.foto_autoridad}`}
                     alt={user.nombre_autoridad}
                     width={300}
                     height={300}
                     unoptimized // Desactiva la optimización de Next.js
-                  />
+
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover" // Recorta la imagen sin deformarla
+                    }} />
                   <div className="social-wrap">
                     <div className="social-wrap-inner">
                       <Link className="social-share" href="#"><i className="fa fa-share-alt"></i></Link>
@@ -67,7 +89,17 @@ const Team = ({ style }: any) => {
                     </div>
                   </div>
                 </div>
-                <div className="details">
+                <div className="details"
+                  style={{
+                    height: "120px", // Fija la altura para que no crezca con el texto
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                    overflow: "hidden",
+                    padding: "10px",
+                  }}>
                   <h4><Link href="#">{user.nombre_autoridad}</Link></h4>
                   <span>{user.cargo_autoridad}</span>
                   {/* <p>Celular: {user.celular_autoridad}</p> */}

@@ -1,5 +1,6 @@
 import intro_data from "@/data/IntroData"
 import Image from "next/image"
+import Link from "next/link"
 
 
 const IntroArea = () => {
@@ -27,8 +28,9 @@ const IntroArea = () => {
                                     <Image src={item.icon} alt="img" />
                                  </div>
                                  <div className="details">
-                                    <h5> {item.title}</h5>
-                                    <p>{item.desc}</p>
+                                    <h5>
+                                    <Link className="b-animate-3" href="/about">{item.title}</Link>
+                                    </h5>
                                  </div>
                               </div>
                            </li>

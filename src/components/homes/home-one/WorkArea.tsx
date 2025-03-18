@@ -57,7 +57,7 @@ const WorkArea = () => {
             </div>
             <div className="row">
                {work_data.map((item) => (
-                  <div key={item.id} className="col-lg-3 col-md-6">
+                  <div key={item.id} className="col-lg-6 col-md-6">
                      <div className="single-intro-inner style-icon-bg bg-gray text-center">
                         <div className="thumb">
                            <Image src={item.icon} alt="img" />
@@ -65,7 +65,7 @@ const WorkArea = () => {
                         </div>
                         <div className="details">
                            <h5>{item.title}</h5>
-                           <p>{item.desc}</p>
+                           {/* <p>{item.desc}</p> */}
                         </div>
                      </div>
                   </div>
